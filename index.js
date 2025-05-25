@@ -14,6 +14,10 @@ app.use(cors({
 
 app.use(express.json());
 
+
+app.get('/test', (req, res) => {
+  res.json({ message: 'Test endpoint is working!' });
+})
 // Route
 app.post('/api/contact', async (req, res) => {
   const { name, phone, message } = req.body;
