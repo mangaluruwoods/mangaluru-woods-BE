@@ -20,9 +20,9 @@ app.get('/test', (req, res) => {
 })
 // Route
 app.post('/api/contact', async (req, res) => {
-  const { name, phone, message } = req.body;
+  const { name, phone, message,email } = req.body;
 
-  if (!name || !message) {
+  if (!name || !message || !email) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
